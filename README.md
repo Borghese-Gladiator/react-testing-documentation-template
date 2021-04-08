@@ -1,12 +1,43 @@
-# Getting Started with Create React App
+# React + Documentation + Testing Example
+Created example frontend with:
+- Create React App (Jest && React Testing Library) - Docz (uses MDX internally for markdown + JS display)
+- Material UI for components and styling
+
+## Initialization Process
+- `npx create-react-app react-testing-documentation-template`
+- `npm i -D prop-types docz concurrently serve`
+- Add scripts to package.json to start/build/serve docz site
+- Add scripts to package.json to start both docz & React frontend
+- Add script to package.json to serve production locally
+- Moved testing for clarity to devDependencies: `npm i -D @testing-library/jest-dom @testing-library/react @testing-library/user-event`
+- Deployed to Netlify by linking to GitHub Continuous Deployment
+
+## Methodology
+- Jest (unit) tests run on components
+- documentation written on components and included with code
+#### For Each Component
+- add .MDX documentation file
+- add .test.js testing file
+- add PropTypes (propTypes & defaultProps) at bottom of JS file
+#### Notes
+- bundle size not increased by MDX & test.js files since Webpack grabs JS files (& compiled TSX files).
+- since the end output is HTML/CSS/JS - all packages are "build"/"dev" dependencies
+
+## Usage (package.json scripts)
+- `npm run start:dev` - view both documentation and app
+- `npm run start:doz` - view documentation at [http://localhost:4838/](http://localhost:4838/)
+- `npm run start:app` - view app in dev environment at [http://localhost:3000/](http://localhost:3000/)
+- `npm run prod` - builds & serves in prod environment
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+##### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +45,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+##### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+##### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +60,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+##### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
