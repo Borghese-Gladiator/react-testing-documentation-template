@@ -24,7 +24,7 @@ const GameDialog = ({ username, word }) => {
   return (
     <div>
       <Button variant="contained" color="secondary" onClick={handleClickOpen}>
-        <InfoIcon style={{fontSize: 30}} />
+        <span>INFO <InfoIcon style={{fontSize: 30}} /></span>
       </Button>
 
       <Dialog onClose={handleClose} open={open}>

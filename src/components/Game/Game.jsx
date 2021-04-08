@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // Material UI Components
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  Box, Grid, Paper, Container, Button
+  Box, Grid, Paper, Container, Button, Typography
 } from '@material-ui/core';
 // Custom components
 import GamePhase from './GamePhase';
@@ -23,6 +23,7 @@ const Game = ({ loggedUser, word, currentPhase, timeLeft }) => {
   return (
     <Container className={classes.root}>
       <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <Typography variant="h1">Sample Text for Test</Typography>
         <GamePhase currentPhase={currentPhase} timeLeft={timeLeft} />
         <br />
         <Grid container spacing={2}>
