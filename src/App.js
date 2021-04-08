@@ -19,7 +19,7 @@ function App() {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(futureTime - currentTime);
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(futureTime - currentTime));
 
   useEffect(() => {
     const difference = futureTime - new Date();
