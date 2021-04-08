@@ -3,14 +3,14 @@ Created example frontend with:
 - Create React App (Jest && React Testing Library) - Docz (uses MDX internally for markdown + JS display)
 - Material UI for components and styling
 
-## Initialization Process
-- `npx create-react-app react-testing-documentation-template`
-- `npm i -D prop-types docz concurrently serve`
-- Add scripts to package.json to start/build/serve docz site
-- Add scripts to package.json to start both docz & React frontend
-- Add script to package.json to serve production locally
-- Moved testing for clarity to devDependencies: `npm i -D @testing-library/jest-dom @testing-library/react @testing-library/user-event`
-- Deployed to Netlify by linking to GitHub Continuous Deployment
+## Installation
+- `npm i` - takes a while (installing create-react-app + docz + Material UI)
+
+## Usage (package.json scripts)
+- `npm run start:dev` - view both documentation and app
+- `npm run start:doz` - view documentation at [http://localhost:4838/](http://localhost:4838/)
+- `npm run start:app` - view app in dev environment at [http://localhost:3000/](http://localhost:3000/)
+- `npm run prod` - builds & serves in prod environment
 
 ## Methodology
 - Jest (unit) tests run on components
@@ -23,11 +23,15 @@ Created example frontend with:
 - bundle size not increased by MDX & test.js files since Webpack grabs JS files (& compiled TSX files).
 - since the end output is HTML/CSS/JS - all packages are "build"/"dev" dependencies
 
-## Usage (package.json scripts)
-- `npm run start:dev` - view both documentation and app
-- `npm run start:doz` - view documentation at [http://localhost:4838/](http://localhost:4838/)
-- `npm run start:app` - view app in dev environment at [http://localhost:3000/](http://localhost:3000/)
-- `npm run prod` - builds & serves in prod environment
+## My Initialization Process
+- `npx create-react-app react-testing-documentation-template`
+- `npm i -D prop-types docz concurrently serve`
+- Add scripts to package.json to start/build/serve docz site
+- Add scripts to package.json to start both docz & React frontend
+- Add script to package.json to serve production locally
+- Moved testing for clarity to devDependencies: `npm i -D @testing-library/jest-dom @testing-library/react @testing-library/user-event`
+- Deployed to Netlify by linking to GitHub Continuous Deployment
+
 
 ### Getting Started with Create React App
 
